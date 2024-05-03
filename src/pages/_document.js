@@ -16,7 +16,27 @@ export default function Document() {
                         `
                     }}
                 />
-                
+
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            var _iub = _iub || [];
+                            _iub.csConfiguration = {
+                                "askConsentAtCookiePolicyUpdate":true,
+                                "cookiePolicyInOtherWindow":true,
+                                "floatingPreferencesButtonDisplay":"bottom-right",
+                                "perPurposeConsent":true,
+                                "siteId":3620690,
+                                "whitelabel":false,
+                                "cookiePolicyId":22734576,
+                                "lang":"it", 
+                                "banner":{ "acceptButtonDisplay":true,"closeButtonRejects":true,"customizeButtonDisplay":true,"explicitWithdrawal":true,"listPurposes":true,"ownerName":false,"position":"float-top-center","showTitle":false }
+                            };
+                        `
+                    }}
+                />
+                <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/3620690.js"></script>
+                <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
             </Head>
             <body>
                 <Main />
