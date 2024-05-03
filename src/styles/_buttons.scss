@@ -1,0 +1,130 @@
+/*
+* Buttons & Links
+*/
+
+.simple-link {
+
+    font-weight: 600;
+    display: inline-block;
+    transition: .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+    &:hover {
+
+        color: $alt;
+        transform: skewX( -15deg );
+
+    }
+
+    &.simple-link-light {
+
+        font-weight: 400;
+        
+    }
+
+}
+
+.button-hero-holder {
+
+    display: flex;
+    align-items: center;
+
+    &.justify-content-center {
+
+        justify-content: center;
+
+    }
+
+    @include media( "<=tablet" ) {
+
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        
+
+        .button-hero-serif {
+
+            width: calc( 100% - 4px );
+            margin: 0 0 1.25rem 0;
+            padding-left: 0;
+            padding-right: 0;
+            text-align: center;
+                
+            &:last-child {
+
+                margin-bottom: 0;
+
+            }
+
+        }
+
+    }
+
+}
+
+.button-hero-serif {
+
+    font-family: $title_font;
+    text-decoration: none;
+    color: $main;
+    background-color: $dark;
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    border-radius: 0 100px 100px 100px;
+    margin-right: 1rem;
+    border: 2px solid $dark;
+    transition: .3s ease-in-out;
+
+    &:hover {
+
+        color: $main;
+        background-color: $alt;
+        border-color: $alt;
+        text-decoration: none;
+
+    }
+
+    &:last-child {
+
+        margin-right: 0;
+
+    }
+
+    &.button-outlined {
+
+        background-color: transparent;
+        border: 1px solid $dark;
+        color: $dark;
+
+        &:hover {
+
+            background-color: $alt;
+            border-color: $alt;
+            color: $main;
+
+        }
+
+    }
+    
+}
+
+.button-hero-sans {
+
+    font-size: 14px;
+    font-weight: 400;
+    color: $dark;
+    text-decoration: none;
+    border: 1px solid $dark;
+    padding: 20px 40px;
+    border-radius: 0 100px 100px 100px;
+    display: inline-block;
+    transition: .3s ease-in-out;
+
+    &:hover {
+
+        background-color: $dark;
+        color: $main;
+        text-decoration: none;
+
+    }
+
+}

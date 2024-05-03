@@ -1,0 +1,95 @@
+/*
+* General & Reset
+*/
+
+html,
+body {
+
+    font-family: $body_font;
+    font-weight: 300;
+    font-style: normal;
+    font-size: $primary_size;
+    margin: 0;
+    padding: 0;
+    background-color: $main;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    line-height: 1;
+    margin: 0 0 1rem 0;
+
+}
+
+p {
+
+    font-size: $primary_size;
+    line-height: 1.4;
+    font-weight: 300;
+    margin-bottom: 1rem;
+
+    &:last-child {
+
+        margin-bottom: 0;
+
+    }
+
+}
+
+a {
+
+    text-decoration: underline;
+    color: inherit;
+    transition: .3s ease-in-out;
+
+    &:hover {
+
+        color: $alt;
+        text-decoration: line-through;
+
+    }
+
+}
+
+strong {
+
+    font-weight: 500;
+
+}
+
+// Useful
+.text-center {
+
+    text-align: center;
+
+}
+
+.text-uppercase {
+
+    text-transform: uppercase;
+
+}
+
+.text-underline {
+
+    text-decoration: underline;
+    
+}
+
+.color-main {
+
+    color: $main !important;
+
+}
+
+.color-dark {
+
+    color: $dark !important;
+
+}

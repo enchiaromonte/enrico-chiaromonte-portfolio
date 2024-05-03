@@ -1,0 +1,356 @@
+/*
+* Main
+*/
+
+// Main Content
+.main-content {
+
+    min-height: 100vh;
+    padding-left: 5%;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    .content-left,
+    .content-right {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .content-left {
+
+        width: 20%;
+        padding: 0 10% 0 10%;
+
+    }
+
+    .content-right {
+
+        width: 60%;
+
+    }
+
+    &.main-content-home {
+
+        max-height: calc( 100vh - 20% );
+        overflow: hidden;
+
+    }
+
+    &.main-content-about {
+
+        .content-left {
+
+            width: 40%;
+            padding-right: 0;
+            position: relative;
+            z-index: 98;
+            justify-content: flex-start;
+            padding-top: 10%;
+            padding-bottom: 5rem;
+
+            .description-mask {
+
+                padding-right: calc( 5rem + 60px );
+
+            }
+
+            .button-hero-holder {
+
+                margin-top: 2.5rem;
+
+            }
+
+        }
+
+        .content-right {
+
+            width: 50%;
+            justify-content: flex-start;
+            padding-top: 5%;
+
+            .about-image {
+
+                margin-left: -5rem;
+
+                img {
+
+                    max-width: 60%;
+                    border-radius: 10px;
+
+                }
+
+            }
+
+        }
+
+    }
+
+    &.main-content-works {
+
+        .content-left {
+
+            width: 50%;
+            height: 100%;
+            position: fixed;
+            z-index: 98;
+            justify-content: flex-end;
+            padding-top: 0;
+
+            .content-main {
+
+                padding-bottom: calc( 5rem - 12.5px );
+
+            }
+
+            .description-mask {
+
+                padding-right: 50%;
+
+                p {
+
+                    a {
+
+                        color: inherit;
+                        margin-left: 5px;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        .content-right {
+
+            width: 50%;
+            position: relative;
+            z-index: 98;
+            overflow: hidden;
+            padding-top: 10%;
+            padding-bottom: 5rem;
+            padding-left: 50%;
+
+        }
+
+    }
+
+    &.main-content-single-work {
+
+        width: 100%;
+        max-width: 80%;
+        padding: 0 10%;
+
+        .content-center {
+
+            width: 100%;
+
+        }
+
+    }
+
+    &.main-content-contacts {
+
+        max-height: 100vh;
+        overflow: hidden;
+
+        .content-left {
+
+            width: 60%;
+            padding-top: 0;
+            padding-right: 0;
+            position: relative;
+            z-index: 98;
+
+            .description-mask {
+
+                padding-right: 50%;
+
+                p {
+
+                    a {
+
+                        color: inherit;
+                        margin-left: 5px;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    @include media( "<=tablet" ) {
+
+        min-height: 100vh;
+        padding: 10%;
+        max-width: none;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .content-left,
+        .content-right {
+
+            display: flex;
+            justify-content: flex-start;
+
+        }
+
+        .content-right,
+        .content-left {
+
+            width: auto;
+            padding: 0;
+
+        }
+
+        &.main-content-home {
+
+            min-height: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            
+            .content-left,
+            .content-right {
+
+                padding-top: 10%;
+
+            }
+
+        }
+
+        &.main-content-about {
+
+            min-height: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+
+            .content-left {
+    
+                width: auto;
+                padding-right: 0;
+                padding-top: 10%;
+                padding-bottom: 20%;
+                order: 2;
+    
+                .description-mask {
+    
+                    padding-right: 0;
+    
+                }
+    
+            }
+    
+            .content-right {
+    
+                width: auto;
+                justify-content: flex-start;
+                padding-top: 10%;
+                order: 1;
+    
+                .about-image {
+    
+                    margin-left: 0;
+                    transform: translateY( 0 ) !important;
+    
+                    img {
+    
+                        max-width: 100%;
+    
+                    }
+    
+                }
+    
+            }
+    
+        }
+
+        &.main-content-works {
+
+            .content-left {
+    
+                width: auto;
+                height: auto;
+                position: relative;
+                z-index: 98;
+                justify-content: flex-start;
+                padding-top: 0;
+    
+                .content-main {
+    
+                    padding-bottom: 0;
+    
+                }
+    
+                .description-mask {
+    
+                    padding-right: 0;
+    
+                }
+    
+            }
+    
+            .content-right {
+    
+                width: auto;
+                padding-top: 20%;
+                padding-bottom: 10%;
+                padding-left: 0;
+    
+            }
+    
+        }
+
+        &.main-content-single-work {
+
+            width: auto;
+            max-width: none;
+            padding: 0;
+    
+            .content-center {
+    
+                width: auto;
+    
+            }
+    
+        }
+
+        &.main-content-contacts {
+
+            max-height: 100vh;
+            min-height: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+
+            .content-left,
+            .content-right {
+
+                padding-top: 10%;
+
+            }
+
+            .content-left {
+    
+                width: auto;
+    
+                .description-mask {
+    
+                    padding-right: 0;
+    
+                }
+    
+            }
+    
+        }
+
+    }
+
+}

@@ -1,0 +1,343 @@
+/*
+* Navbar
+*/
+
+.navbar {
+
+    width: 5%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 129;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+
+    .navbar-item {
+
+        transform: rotate(-90deg);
+        margin-top: 5rem;
+
+        a {
+
+            font-size: .66rem;
+            line-height: 1;
+            text-decoration: none;
+            color: $dark;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: .3s ease-in-out;
+           
+            &:hover {
+
+                text-decoration: line-through;
+                
+            }
+
+        }
+
+        &.navbar-item-page {
+
+            position: relative;
+
+            &:before {
+
+                content: '';
+                width: 100px;
+                height: 1px;
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+                position: absolute;
+                left: -120px;
+                top: calc( 50% + .5px);
+                transition: .3s ease-in-out;
+
+            }
+
+        }
+
+        &.navbar-item-copyright {
+
+            width: calc( 100px + 5rem );
+            position: absolute;
+            bottom: 10rem;
+            font-size: .66rem;
+            line-height: 1;
+            text-decoration: none;
+            color: $dark;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-top: 0;
+            transition: .3s ease-in-out;
+
+        }
+
+    }
+
+    &.navbar-dark {
+
+        .navbar-item {
+
+            a {
+
+                color: $dark;
+
+            }
+
+            &.navbar-item-page {
+
+                &::before {
+
+                    border-color: $dark;
+
+                }
+
+            }
+
+            &.navbar-item-copyright {
+
+                & > div {
+
+                    color: $dark;
+
+                }
+
+            }
+
+        }
+
+    }
+
+    &.navbar-light {
+
+        .navbar-item {
+
+            a {
+
+                color: $main;
+
+            }
+
+            &.navbar-item-page {
+
+                &::before {
+
+                    border-color: $main;
+
+                }
+
+            }
+
+            &.navbar-item-copyright {
+
+                & > div {
+
+                    color: $main;
+
+                }
+
+            }
+
+        }
+
+    }
+
+    @include media( "<=tablet" ) {
+
+        width: auto;
+        height: auto;
+        position: relative;
+        left: 0%;
+        right: 0%;
+        padding: 10%;
+        flex-direction: row;
+        
+        .navbar-item {
+
+            transform: rotate( 0 );
+            margin-top: 0;
+    
+            &.navbar-item-page {
+        
+                &:before {
+    
+                    left: 80px;
+    
+                }
+    
+            }
+    
+            &.navbar-item-copyright {
+    
+                width: auto;
+                position: relative;
+                bottom: auto;
+    
+            }
+    
+        }
+
+        
+
+    }
+
+}
+
+.hero-menu {
+
+    display: flex;
+    flex-direction: column;
+
+    .menu-item {
+
+        font-family: $title_font;
+        font-size: clamp( 10vw , 100px, 100px );
+        font-weight: 200;
+        line-height: .75;
+        color: $dark;
+        text-decoration: none;
+        padding: .75rem 0;
+        transition: .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+        display: inline-block;
+
+        &:hover {
+
+            color: $alt;
+            transform: skewX( -15deg ) translateX( 1rem );
+
+        }
+
+    }
+
+    @include media( "<=tablet" ) {
+
+        .menu-item {
+
+            font-family: $title_font;
+            font-size: clamp( 10vw , 54px, 54px );
+            line-height: 1;
+    
+        }
+
+    }
+
+}
+
+.scrolling-list {
+
+    .scrolling-list-item {
+    
+        padding: 1.25rem 0;
+        
+        .scrolling-list-item-link {
+
+            font-family: $title_font;
+            color: $main;
+            font-size: 7vw;
+            line-height: .7;
+            text-decoration: none;
+            transition: .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+            position: relative;
+            display: block;
+            text-transform: uppercase;
+            
+            &:hover {
+
+                opacity: .5;
+                transform: skewX( -15deg ) translateX( 1rem );
+    
+            }
+
+            &.not-hovering {
+
+                &:hover {
+
+                    opacity: 1;
+                    transform: skewX( 0 ) translateX( 0 );
+
+                }
+
+            }
+
+        }
+        
+        .scrolling-list-item-spec {
+
+            display: block;
+            font-size: 11px;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-family: $body_font;
+            color: $main;
+            line-height: 1;
+            letter-spacing: 2px;
+            margin-top: .75rem;
+
+            .new-badge {
+
+                vertical-align: top;
+                background-color: $main;
+                color: $dark;
+                margin-left: 1rem;
+                padding: 5px 10px;
+                border-radius: 100px;
+
+            }
+
+        }
+        
+        &:first-child {
+
+            padding-top: 0;
+
+        }
+
+        &:last-child {
+
+            padding-bottom: 0;
+
+        }
+        
+    }
+
+    @include media( "<=tablet" ) {
+
+        .scrolling-list-item {
+            
+            .scrolling-list-item-spec {
+    
+                display: flex;
+                justify-content: space-between;
+                font-size: 11px;
+                font-weight: 400;
+                text-transform: uppercase;
+                font-family: $body_font;
+                color: $main;
+                line-height: 1;
+                letter-spacing: 2px;
+                margin-top: .75rem;
+    
+                .new-badge {
+    
+                    vertical-align: top;
+                    background-color: $main;
+                    color: $dark;
+                    margin-left: 1rem;
+                    padding: 5px 10px;
+                    border-radius: 100px;
+    
+                }
+    
+            }
+            
+
+        }
+
+    }
+
+}

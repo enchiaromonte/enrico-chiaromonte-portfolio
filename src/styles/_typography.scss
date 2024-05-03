@@ -1,0 +1,190 @@
+/*
+* Typography
+*/
+
+.title-mask,
+.description-mask {
+
+    overflow: hidden;
+
+}
+
+.title-mask {
+
+    margin-bottom: 1rem;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+
+        margin: 0;
+
+    }
+
+}
+
+.description-mask {
+
+    margin-bottom: .85rem;
+
+    &:last-child {
+
+        margin-bottom: 0;
+
+    }
+
+}
+
+.title-serif-hero {
+
+    font-family: $title_font;
+    font-size: 14vw;
+    font-weight: 300;
+    line-height: 1em;
+    color: $main;
+    letter-spacing: 0;
+    text-transform: none;
+
+}
+
+.title-serif-big {
+
+    font-family: $title_font;
+    font-size: 10vw;
+    color: $main;
+    font-weight: 300;
+    text-align: center;
+    text-transform: none;
+    line-height: 1.2;
+
+}
+
+.title-serif-medium {
+
+    font-family: $title_font;
+    font-weight: 300;
+    line-height: 1.2em;
+    letter-spacing: 0;
+    text-transform: none;
+    font-size: clamp( 1.5rem , 2vw , 46px);
+    margin: 0 0 1rem 0;
+
+}
+
+.title-serif-small {
+
+    font-family: $title_font;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 2px;
+    font-size: 15px;
+    margin: 2rem 0 .5rem 0;
+    display: inline-block;
+
+}
+
+.title-sans-small {
+
+    letter-spacing: 2px;
+    font-family: $body_font;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+
+}
+
+.description-serif-hero {
+
+    font-size: 4rem;
+    line-height: 1;
+    font-family: $title_font;
+
+    @include media( "<=tablet" ) {
+
+        font-size: 40px;
+
+    }
+
+}
+
+.description-sans-hero {
+
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+
+    a {
+
+        font-weight: 600;
+        color: inherit;
+
+        &:hover {
+
+            text-decoration: line-through;
+
+        }
+
+    }
+
+}
+
+.description-sans-smaller {
+
+    font-size: 11px;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin: 0;
+
+}
+
+.description-sans-primary {
+
+    font-size: $primary_size;
+    line-height: 1.8;
+    
+}
+
+.description-sans-small {
+
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+    font-weight: 300;
+
+}
+
+ol.list-sans-primary,
+ul.list-sans-primary {
+
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+
+        position: relative;
+        padding-left: 1rem;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        font-size: $primary_size;
+
+        &:before {
+
+            content: '';
+            width: .35rem;
+            height: .35rem;
+            border: 1px dashed $dark;
+            border-radius: 10px;
+            position: absolute;
+            left: 0;
+            top: calc( 50% - ( .175rem + 1px ) )
+
+        }
+
+    }
+
+}

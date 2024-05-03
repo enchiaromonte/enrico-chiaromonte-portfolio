@@ -1,0 +1,26 @@
+/*
+* Variables
+*/
+
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montaga&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+// Colors
+$main : #ece7e1;
+$dark : #1a1818;
+$alt : #693939;
+$white : #ffffff;
+
+// Fonts
+$body_font : "Montserrat", 'Arial', 'Helvetica' , sans-serif;
+$title_font : "Cormorant Garamond", 'Times', serif;
+$primary_size: 15px;
+
+// Custom Breakpointg
+$breakpoints: (
+  'phone': 320px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'laptop': 1440px,
+);
